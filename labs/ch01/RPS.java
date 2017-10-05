@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HelloWorld {
+public class RPS {
 
     public static void main(String[] args) {
 
@@ -14,19 +14,19 @@ public class HelloWorld {
         String player2 = scan.next().toLowerCase();
 
         switch (player1 + player2) {
-            case "rockscissors":
-            case "scissorspaper":
-            case "paperrock":
+            case "rock" + "scissors":
+            case "scissors" + "paper":
+            case "paper" + "rock":
                 System.out.println("Player 1 wins");
                 break;
-            case "scissorsrock":
-            case "paperscissors":
-            case "rockpaper":
+            case "scissors" + "rock":
+            case "paper" + "scissors":
+            case "rock" + "paper":
                 System.out.println("Player 2 wins");
                 break;
-            case "rockrock":
-            case "scissorsscissors":
-            case "paperpaper":
+            case "rock" + "rock":
+            case "scissors" + "scissors":
+            case "paper" + "paper":
                 System.out.println("Draw");
                 break;
             default:
