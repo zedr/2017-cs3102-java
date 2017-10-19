@@ -7,9 +7,9 @@ public class Main {
     public static void main(String args[]) {
         ArrayList<Integer> ints = new ArrayList<>();
         while (ints.size() < 45) {
-            double rnd = ((Math.random() * 100) % 46) + 1;
+            int rnd = (int) ((Math.random() * 100) % 46) + 1;
             if (!ints.contains(rnd)) {
-                ints.add((int) rnd);
+                ints.add(rnd);
             }
         }
         System.out.println(ints);
