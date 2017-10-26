@@ -13,7 +13,7 @@ public class Main {
 
         // 1. Write code to test method findShortest()
 
-        // 2. Write code to test method countThreeAndFiveLetterWords()
+        // 2. Write code to test method countThreeOrFiveLetterWords()
 
         // 3. Write code to test method meanWordLength()
 
@@ -35,7 +35,7 @@ public class Main {
     }
 
     // 2. Write code to count how any 3- and 5-letter words are in the list (5 Marks)
-    private static String countThreeAndFiveLetterWords(String[] words) {
+    private static String countThreeOrFiveLetterWords(String[] words) {
         String longest;
 
         // Your code goes here ...
