@@ -26,7 +26,7 @@ public class Main {
 
     /*
     // 1. Write code to find the shortest and longest word in the list (5 Marks)
-    private static String findShortest(String[] words) {
+    private static String[] findShortest(String[] words) {
         String shortest;
 
         // Your code goes here ...
