@@ -13,11 +13,13 @@ public class Main {
 
         // 1. Write code to test method findShortest()
 
-        String[] pair = findShortest(words);
-        assert pair[0].equals("p");
-        assert pair[1].equals("scientificophilosophical");
+        String[] results = findShortest(words);
+        assert results[0].equals("p");
+        assert results[1].equals("scientificophilosophical");
 
         // 2. Write code to test method countThreeOrFiveLetterWords()
+        String message = countThreeOrFiveLetterWords(words);
+        assert message.equals("1420,10230");
 
         // 3. Write code to test method meanWordLength()
 
@@ -27,20 +29,20 @@ public class Main {
 
         // 6. Write code to test method removeFourLetterWords()
     }
-    /*
+
     // 1. Write code to find the shortest and longest word in the list (5 Marks)
-    */
     private static String[] findShortest(String[] words) {
         String shortest = "";
         String longest = "";
-        String current;
+        String current = "";
 
         int shortestLen = 0;
         int longestLen = 0;
         int currentLen = 0;
-        int len = words.length;
 
-        for (int i = 0; i < len; i++) {
+        final int wordCount = words.length;
+
+        for (int i = 0; i < wordCount; i++) {
             current = words[i];
             currentLen = current.length();
 
@@ -55,21 +57,37 @@ public class Main {
             }
         }
 
-        String[] pair = {shortest, longest};
+        String[] results = {shortest, longest};
 
-        return pair;
+        return results;
     }
 
-    /*
 
     // 2. Write code to count how any 3- and 5-letter words are in the list (5 Marks)
     private static String countThreeOrFiveLetterWords(String[] words) {
-        String longest;
+        int threeCount = 0;
+        int fiveCount = 0;
 
-        // Your code goes here ...
+        final int wordCount = words.length;
 
-        return longest;
+        int currentLen = 0;
+
+        for (int i = 0; i < wordCount; i++) {
+            currentLen = words[i].length();
+
+            switch (currentLen) {
+                case 3:
+                    threeCount += 1;
+                    break;
+                case 5:
+                    fiveCount += 1;
+                    break;
+            }
+        }
+
+        return String.format("%d,%d", threeCount, fiveCount);
     }
+    /*
 
     // 3. Write code to find the average word length (10 Marks)
     private static double meanWordLength(String[] words) {
