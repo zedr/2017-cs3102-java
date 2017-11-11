@@ -5,10 +5,7 @@ OUT=bin
 default: run
 
 run: Main.class
-	@java -cp ${CLASSPATH}:bin ie.tcd.cs3102.Main
-
-test: MainTests.class
-	@java -cp ${CLASSPATH}:bin ie.tcd.cs3102.MainTests
+	@java -cp ${CLASSPATH}:bin -ea ie.tcd.cs3102.Main
 
 %.class: src/ie/tcd/cs3102/%.java
 	javac -cp ${CLASSPATH} -d bin $| $<

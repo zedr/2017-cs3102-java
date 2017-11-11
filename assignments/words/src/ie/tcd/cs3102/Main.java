@@ -13,6 +13,10 @@ public class Main {
 
         // 1. Write code to test method findShortest()
 
+        String[] pair = findShortest(words);
+        assert pair[0].equals("p");
+        assert pair[1].equals("scientificophilosophical");
+
         // 2. Write code to test method countThreeOrFiveLetterWords()
 
         // 3. Write code to test method meanWordLength()
@@ -23,16 +27,40 @@ public class Main {
 
         // 6. Write code to test method removeFourLetterWords()
     }
-
     /*
     // 1. Write code to find the shortest and longest word in the list (5 Marks)
+    */
     private static String[] findShortest(String[] words) {
-        String shortest;
+        String shortest = "";
+        String longest = "";
+        String current;
 
-        // Your code goes here ...
+        int shortestLen = 0;
+        int longestLen = 0;
+        int currentLen = 0;
+        int len = words.length;
 
-        return shortest;
+        for (int i = 0; i < len; i++) {
+            current = words[i];
+            currentLen = current.length();
+
+            if (currentLen < shortestLen || shortest.equals("")) {
+                shortest = current;
+                shortestLen = currentLen;
+            }
+
+            if (currentLen > longestLen) {
+                longest = current;
+                longestLen = currentLen;
+            }
+        }
+
+        String[] pair = {shortest, longest};
+
+        return pair;
     }
+
+    /*
 
     // 2. Write code to count how any 3- and 5-letter words are in the list (5 Marks)
     private static String countThreeOrFiveLetterWords(String[] words) {
