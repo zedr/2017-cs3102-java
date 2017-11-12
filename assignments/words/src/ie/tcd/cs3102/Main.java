@@ -172,6 +172,8 @@ public class Main {
      * the other.
      *
      * Signature inspired by the stdlib strcmp() function.
+     * Emulates the behaviour of Unix "sort" with LC_COLLATE=C, that does not
+     * ignore slashes.
      *
      * @return  -1 if the first given string is lower
      *           1 if the second string is lower
