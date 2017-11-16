@@ -13,24 +13,33 @@ public class Main {
 
         // 1. Write code to test method findShortest()
 
+        System.err.print("Test findShortest()... ");
         String[] results = findShortest(words);
         assert results[0].equals("p");
         assert results[1].equals("scientificophilosophical");
+        System.err.println("OK!");
 
         // 2. Write code to test method countThreeOrFiveLetterWords()
+        System.err.print("Test countThreeOrFiveLetterWords()... ");
         String message = countThreeOrFiveLetterWords(words);
         assert message.equals("1420,10230");
+        System.err.println("OK!");
 
         // 3. Write code to test method meanWordLength()
+        System.err.print("Test meanWordLength()... ");
         double mwl = meanWordLength(words);
         assert mwl == 9.569126612007494;
+        System.err.println("OK!");
 
         // 4. Write code to test method frequencyDistribution()
+        System.err.print("Test frequencyDistribution()... ");
         int[][] dist = frequencyDistribution(words);
         assert String.format("%d,%d", dist[0][0], dist[0][1]).equals("1,52");
         assert String.format("%d,%d", dist[23][0], dist[23][1]).equals("24,5");
+        System.err.println("OK!");
 
         // 5. Write code to test method sortedWords()
+        System.err.print("Test compareStrings()... ");
         assert compareStrings("abc", "abc") == 0;
         assert compareStrings("", "") == 0;
         assert compareStrings("ab", "abc") < 0;
@@ -39,8 +48,10 @@ public class Main {
         assert compareStrings("bcd", "abc") > 0;
         assert compareStrings("", "abc") < 0;
         assert compareStrings("abc", "") > 0;
+        System.err.println("OK!");
 
         // Sort the word list. This can take up to 6 minutes on an i7.
+        System.err.print("Test sortedWords(), might take a few minutes... ");
         String[] sortedList = sortedWords(words);
 
         assert sortedList[0].equals("a");
@@ -51,6 +62,7 @@ public class Main {
         assert sortedList[NUMWORDS - 3].equals("zythum");
         assert sortedList[NUMWORDS - 2].equals("zyzomys");
         assert sortedList[NUMWORDS - 1].equals("zyzzogeton");
+        System.err.println("OK!");
 
         // Print the sorted words to stdout
         for (int i = 0; i < NUMWORDS; i++) {
@@ -58,9 +70,11 @@ public class Main {
         }
 
         // 6. Write code to test method removeFourLetterWords()
+        System.err.print("Test removeFourLetterWords()... ");
         assert words[61].equals("yark");
         removeFourLetterWords(words);
         assert words[61].equals("");
+        System.err.println("OK!");
 
     }
 
