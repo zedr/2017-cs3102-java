@@ -65,8 +65,6 @@ public class Main {
     }
 
     // 1. Write code to find the shortest and longest word in the list (5 Marks)
-    // 
-    // Many longest and many shortest.
     private static String[] findShortest(String[] words) {
         String shortest = "";
         String longest = "";
