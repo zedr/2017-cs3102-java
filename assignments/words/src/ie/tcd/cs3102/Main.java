@@ -152,8 +152,6 @@ public class Main {
     //    Hint: You need to build a two-dimensional array of the form:
     //          [ [1, p], [2, q], [3, e], ... ]
     //          where p, q, r are integer word counts for words of length 1, 2, 3 respectively
-    //
-    //          Wrong return type?
     private static int[][] frequencyDistribution(String[] words) {
         // Use findShortest() to calculate the length of the longest word in the
         // list.
