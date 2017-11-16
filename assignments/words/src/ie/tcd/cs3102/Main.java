@@ -217,6 +217,10 @@ public class Main {
     }
 
     // 5. Write code to build a sorted version of the list (in ascending order) (40 Marks)
+    //
+    // Java implementation of Insertion Sort, based on the pseudo code published
+    // in "Introduction to Algorithms, 3rd Edition" (Cormen, Leiserson, Rivest,
+    // Stein).
     private static String[] sortedWords(String[] words) {
         // First, create and use a copy of the words array, as we do not want
         // to mutate the original array.
