@@ -12,7 +12,6 @@ public class Main {
         String []words = readWords(FILENAME, NUMWORDS);
 
         // 1. Write code to test method findShortest()
-
         System.err.print("Test findShortest()... ");
         String[] results = findShortest(words);
         assert results[0].equals("p");
@@ -163,7 +162,6 @@ public class Main {
         int wordLen;
 
         // Initialise the two-dimensional array
-
         for (int i = 0; i < longestLen; i++) {
             fdt[i][0] = i + 1;
             fdt[i][1] = 0;
