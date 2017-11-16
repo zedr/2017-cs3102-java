@@ -231,7 +231,7 @@ public class Main {
         if (wordCount > 1) {
 
             // Implement the Insertion Sort algorithm.
-            // 
+            //
             // Iterate through the array of strings.
             for (int i = 1, l = 0; i < wordCount; i++, l = i - 1) {
                 // Select the key. Everything to our left should already be
